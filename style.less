@@ -286,11 +286,22 @@
     opacity: 0.2 !important;
   }
   
-  .animation-delete {
-    opacity: 0 !important;
-  }
-  
   .has--opacity {
     opacity: 0.3;
+  }
+
+  // 480px
+  @media screen and (max-width: 480px) {
+      header {
+          .box-padding(25px)
+      }
+
+      input, &::placeholder, p {
+          .text(18px, 400) !important;
+      }
+
+      .create-todo, .todo {
+        .box-padding(10px 25px) !important;
+      }
   }
   

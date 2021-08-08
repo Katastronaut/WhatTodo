@@ -210,9 +210,23 @@ section .todo-wrapper .todo-list .todo button.trash-btn:hover path {
 .todo--done {
   opacity: 0.2 !important;
 }
-.animation-delete {
-  opacity: 0 !important;
-}
 .has--opacity {
   opacity: 0.3;
+}
+@media screen and (max-width: 480px) {
+  header {
+    padding: 25px;
+  }
+  input,
+  ::placeholder,
+  p {
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.5px !important;
+    color: var(--color-black) !important;
+  }
+  .create-todo,
+  .todo {
+    padding: 10px 25px !important;
+  }
 }
