@@ -1,0 +1,218 @@
+:root {
+  --color-black: #37474c;
+  --color-white: #ffffff;
+  --color-white-fade: rgba(255, 255, 255, 0.1);
+  --color-gray-dark: #565d61;
+  --color-border: #fafafb;
+  --color-primary: #fec705;
+  --color-green: #91d148;
+  --color-green-fade: rgba(145, 209, 72, 0.1);
+  --color-red: #e04660;
+  --color-red-fade: rgba(224, 70, 96, 0.1);
+  --color-background: #ffffff;
+  --color-label-bg: rgba(55, 71, 76, 0.05);
+}
+.darkmode {
+  --color-black: #f6f6ee;
+  --color-white: #37474c;
+  --color-white-fade: rgba(55, 71, 76, 0.1);
+  --color-gray-dark: #565d61;
+  --color-border: #fafafb;
+  --color-primary: #fec705;
+  --color-green: #91d148;
+  --color-red: #e04660;
+  --color-red-fade: rgba(224, 70, 96, 0.2);
+  --color-background: #162428;
+  --color-label-bg: rgba(246, 246, 238, 0.05);
+}
+.transit {
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0.25, 0.2, 0.45, 1);
+  transition-delay: 0s;
+  will-change: all;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background);
+}
+h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--color-black);
+  margin-top: 40px;
+}
+button,
+.todo--label {
+  padding: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 9px;
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0.25, 0.2, 0.45, 1);
+  transition-delay: 0s;
+  will-change: all;
+}
+button span,
+.todo--label span {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+  pointer-events: none;
+}
+button span path,
+.todo--label span path {
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0.25, 0.2, 0.45, 1);
+  transition-delay: 0s;
+  will-change: all;
+}
+button:hover,
+.todo--label:hover {
+  background-color: var(--color-label-bg);
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 85px;
+}
+header .categories a {
+  padding: 10px 20px;
+  color: var(--color-black);
+  text-decoration: none;
+  opacity: 0.6;
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0.25, 0.2, 0.45, 1);
+  transition-delay: 0s;
+  will-change: all;
+}
+header .categories a.is--active,
+header .categories a:hover {
+  opacity: 1;
+}
+header .themes button {
+  background-color: transparent;
+  padding: 10px 10px;
+}
+header .themes button:hover {
+  opacity: 1;
+}
+header .themes button path {
+  fill: var(--color-black);
+}
+section {
+  width: 100%;
+  max-width: 650px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+section .create-todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+  padding: 10px 30px;
+}
+section .create-todo input {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: var(--color-black);
+  padding: 0;
+  border: none;
+  background: none;
+}
+section .create-todo input:focus {
+  outline: none;
+}
+section .create-todo input::placeholder {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: var(--color-black);
+  opacity: 0.2;
+}
+section .create-todo button {
+  opacity: 0.3;
+}
+section .create-todo button.add-btn span {
+  transform: rotate(45deg);
+}
+section .create-todo button.add-btn span path {
+  fill: var(--color-black);
+}
+section .create-todo button.add-btn:hover > span {
+  opacity: 1;
+}
+section .create-todo button:hover {
+  opacity: 1;
+}
+section .todo-wrapper .todo-list {
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0.25, 0.2, 0.45, 1);
+  transition-delay: 0s;
+  will-change: all;
+}
+section .todo-wrapper .todo-list .todo {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  opacity: 0.9;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.25, 0.2, 0.45, 1);
+  transition-delay: 0s;
+  will-change: all;
+  transition-duration: 0.15s;
+}
+section .todo-wrapper .todo-list .todo p {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: var(--color-black);
+  margin-right: auto;
+}
+section .todo-wrapper .todo-list .todo .todo--label {
+  margin-right: 10px;
+}
+section .todo-wrapper .todo-list .todo .todo--label input {
+  display: none;
+}
+section .todo-wrapper .todo-list .todo .todo--label .completed-btn path {
+  fill: var(--color-black);
+}
+section .todo-wrapper .todo-list .todo button.trash-btn path {
+  fill: var(--color-black);
+}
+section .todo-wrapper .todo-list .todo button.trash-btn:hover {
+  background-color: var(--color-red-fade);
+}
+section .todo-wrapper .todo-list .todo button.trash-btn:hover path {
+  fill: var(--color-red);
+}
+.todo--done {
+  opacity: 0.2 !important;
+}
+.animation-delete {
+  opacity: 0 !important;
+}
+.has--opacity {
+  opacity: 0.3;
+}
